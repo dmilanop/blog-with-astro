@@ -1,0 +1,21 @@
+---
+const platforms = {
+    github: "GitHub",
+    instagram: "Instagram",
+    linkedin: "LinkedIn",
+    twitter: "Twitter",
+};
+const usernames = {
+    github: "dmilanop",
+    instagram: "dmilanop",
+    linkedin: "luis-milano",
+    twitter: "dmilanop",
+};
+---
+
+<footer>
+    <p>¡Más información sobre mis proyectos en <a href={`https://www.${platforms.github}.com/${usernames.github}`}>{platforms.github}</a>!</p>
+    <p>¡Mi <a href={`https://www.${platforms.instagram}.com/${usernames.instagram}`}>{platforms.instagram}</a>!</p>
+    <p>¡Mi <a href={`https://www.${platforms.linkedin}.com/${usernames.linkedin}`}>{platforms.linkedin}</a>!</p>
+    <p>¡Mi <a href={`https://www.${platforms.twitter}.com/${usernames.twitter}`}>{platforms.twitter}</a>!</p>
+</footer>
