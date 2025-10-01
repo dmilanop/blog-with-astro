@@ -7,6 +7,12 @@ const tags = [...new Set(allPosts.flatMap(post => post.frontmatter.tags || []))]
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+    <div class="tags">
+        {tags.map((tag) => (
+            <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+        ))}
+    </div>
+
     <style>
         a {
             color: #00539F;
@@ -26,10 +32,4 @@ const tags = [...new Set(allPosts.flatMap(post => post.frontmatter.tags || []))]
             background-color: #F8FCFD;
         }
     </style>
-
-    <div class="tags">
-        {tags.map((tag) => (
-            <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-        ))}
-    </div>
 </BaseLayout>
